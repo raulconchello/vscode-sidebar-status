@@ -1,0 +1,109 @@
+{
+  "name": "sidebar-status",
+  "displayName": "Side Bar Status",
+  "description": "Shows the workspace, git branch and push/pull status as a small section in every side bar page.",
+  "version": "0.0.3",
+  "publisher": "local",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raulconchello/vscode-sidebar-status.git"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "extensionDependencies": [
+    "vscode.git"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "sidebarWorkspace-search",
+          "title": "Search",
+          "icon": "media/status.svg"
+        },
+        {
+          "id": "sidebarWorkspace-extensions",
+          "title": "Extensions",
+          "icon": "media/status.svg"
+        }
+      ]
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "sidebarWorkspace.explorer",
+          "name": "Workspace"
+        }
+      ],
+      "scm": [
+        {
+          "id": "sidebarWorkspace.scm",
+          "name": "Workspace"
+        }
+      ],
+      "debug": [
+        {
+          "id": "sidebarWorkspace.debug",
+          "name": "Workspace"
+        }
+      ],
+      "remote": [
+        {
+          "id": "sidebarWorkspace.remote",
+          "name": "Workspace"
+        }
+      ],
+      "gitlens": [
+        {
+          "id": "sidebarWorkspace.gitlens",
+          "name": "Workspace",
+          "when": "sidebarWorkspace.page.gitlens"
+        }
+      ],
+      "gitlensInspect": [
+        {
+          "id": "sidebarWorkspace.gitlensInspect",
+          "name": "Workspace",
+          "when": "sidebarWorkspace.page.gitlensInspect"
+        }
+      ],
+      "github-pull-requests": [
+        {
+          "id": "sidebarWorkspace.github-pull-requests",
+          "name": "Workspace",
+          "when": "sidebarWorkspace.page.github-pull-requests"
+        }
+      ],
+      "python": [
+        {
+          "id": "sidebarWorkspace.python",
+          "name": "Workspace",
+          "when": "sidebarWorkspace.page.python"
+        }
+      ],
+      "sidebarWorkspace-search": [
+        {
+          "id": "sidebarWorkspace.search",
+          "name": "Workspace",
+          "when": "sidebarWorkspace.moved"
+        }
+      ],
+      "sidebarWorkspace-extensions": [
+        {
+          "id": "sidebarWorkspace.extensions",
+          "name": "Workspace",
+          "when": "sidebarWorkspace.moved"
+        }
+      ]
+    }
+  }
+}
