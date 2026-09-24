@@ -4,7 +4,7 @@
   "description": "Shows the workspace, git branch and push/pull status as a small section in every side bar page.",
   "version": "0.0.3",
   "publisher": "local",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/raulconchello/vscode-sidebar-status.git"

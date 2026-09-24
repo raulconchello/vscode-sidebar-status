@@ -20,7 +20,7 @@ VS Code doesn't let plugin sections be shorter than 120 points (about 5 lines).
 
     git clone https://github.com/raulconchello/vscode-sidebar-status.git
     cd vscode-sidebar-status
-    npx @vscode/vsce package --skip-license
+    npx @vscode/vsce package
     code --install-extension sidebar-status-0.0.3.vsix
 
 Then reload the VS Code window.
